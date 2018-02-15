@@ -1,0 +1,34 @@
+<div class="details">
+
+
+  <div class="main-title" style="background-image: url('<%= image_path @cocktail.picture %>')">
+    <h2><%= @cocktail.name %></h2>
+  </div>
+
+  <div class="main">
+
+    <div class="main-dose">
+      <h3>This Cocktail includes :</h3>
+        <ul>
+          <% @cocktail.doses.each do |dose| %>
+            <li><%= dose.description %> de <%= dose.ingredient.name %>
+                <%= button_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <i class="far fa-trash-alt"></i>
+                <% end %>
+            </li>
+          <% end %>
+        </ul>
+    </div>
+
+    <hr>
+    <div class="main-form">
+      <h3>Add a dose</h3>
+      <%= simple_form_for [@cocktail, @dose] do |f| %>
+        <%= f.input :description %>
+        <%= f.association :ingredient, prompt: "Choose an Ingredient"%>
+        <%= f.button :submit, class: "btn btn-primary"%>
+      <% end %>
+    </div>
+  </div>
+
+</div>

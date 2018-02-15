@@ -1,0 +1,20 @@
+
+<div class="home-banner">
+  <h1>Mister Cocktail</h1>
+  <p>Avec Alcool, la fête est plus folle</p>
+</div>
+
+
+<div class="container">
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-xs-3">
+        <div class="cocktail">
+        <%= image_tag cocktail.picture, class: "cocktail-picture"%>
+        <h4><%= cocktail.name %></h4>
+        <%= link_to "", cocktail_path(cocktail), class: "cocktail-link" %>
+        </div>
+      </div>
+     <% end %>
+  </div>
+</div>
