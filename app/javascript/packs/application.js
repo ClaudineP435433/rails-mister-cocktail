@@ -15,3 +15,5 @@ import { loadDynamicBannerText } from '../components/banner';
 
 initUpdateNavbarOnScroll();
 loadDynamicBannerText();
+
+import '../components/select2';

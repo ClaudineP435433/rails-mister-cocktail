@@ -28,6 +28,7 @@
       <%= simple_form_for [@cocktail, @dose] do |f| %>
         <%= f.input :description, label: "Quantity" %>
         <%= f.association :ingredient, prompt: "Choose an Ingredient", input_html: {class: "select2"}%>
+
         <%= f.button :submit, class: "btn btn-primary"%>
       <% end %>
     </div>
