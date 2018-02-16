@@ -1,13 +1,19 @@
 <div class="wrapper">
+
+
 <div class="container">
+
   <div class="row">
     <div class="col-xs-6 col-xs-offset-3">
+      <h3>Add a Cocktail</h3>
+
       <%= simple_form_for [@cocktail] do |f| %>
         <%= f.input :name %>
-        <%= f.input :picture %>
+        <%= f.input :picture, label: 'Picture url'%>
         <%= f.button :submit, class: "btn btn-primary"%>
       <% end %>
     </div>
   </div>
 </div>
 </div>
+

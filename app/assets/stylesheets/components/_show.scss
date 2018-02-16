@@ -17,6 +17,14 @@
   }
 }
 
+.test2 {
+  display: flex;
+
+  button {
+    border: none;
+  }
+}
+
 .details {
   margin-top: 80px;
   display: flex;
@@ -25,7 +33,7 @@
 }
 
 .main-type {
-  margin-bottom: 40px;
+  margin-top: 40px;
   text-align: center;
 
 }

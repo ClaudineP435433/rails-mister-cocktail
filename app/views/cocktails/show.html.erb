@@ -6,20 +6,16 @@
 
   <div class="main">
 
-    <div class="main-type">
-      <h5>
-        <span id="banner-typed-text"></span>
-      </h5>
-    </div>
-
     <div class="main-dose">
       <h3>This Cocktail includes :</h3>
         <ul>
           <% @cocktail.doses.each do |dose| %>
-            <li><%= dose.description %> de <%= dose.ingredient.name %>
-                <%= button_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
-                  <i class="fas fa-times"></i>
-                <% end %>
+
+            <li class="test2">
+              - <%= dose.description %> de <%= dose.ingredient.name %>
+              <%= button_to dose_path(dose), method: :delete, data: { confirm: "Are you sure?" } do %>
+                  <i class="fas fa-times test3"></i>
+              <% end %>
             </li>
           <% end %>
         </ul>
@@ -28,14 +24,19 @@
 
 
     <div class="main-form">
-      <h3>Add a dose</h3>
+      <h3>Add an ingredient</h3>
       <%= simple_form_for [@cocktail, @dose] do |f| %>
         <%= f.input :description, label: "Quantity" %>
-        <%= f.association :ingredient, prompt: "Choose an Ingredient"%>
+        <%= f.association :ingredient, prompt: "Choose an Ingredient", input_html: {class: "select2"}%>
         <%= f.button :submit, class: "btn btn-primary"%>
       <% end %>
     </div>
 
+    <div class="main-type">
+      <h5>
+        <span id="banner-typed-text"></span>
+      </h5>
+    </div>
 
   </div>
 

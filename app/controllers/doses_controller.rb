@@ -19,7 +19,7 @@ class DosesController < ApplicationController
     if @dose.save
       redirect_to cocktail_path(params[:cocktail_id])
     else
-      render :new
+      render "cocktails/show"
     end
   end
 
