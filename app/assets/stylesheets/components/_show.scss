@@ -7,9 +7,14 @@
   background-position: center center;
   height: calc(100vh - 80px);
   width: 50%;
-   color: rgba(255,255,255,1);
+  color: rgba(255,255,255,1);
   font-weight: bolder;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 0px 0px 2px #000000;
+
+  h2 {
+    letter-spacing: 5px;
+    text-align: center;
+  }
 }
 
 .details {
@@ -19,4 +24,23 @@
 
 }
 
+.main-type {
+  margin-bottom: 40px;
+  text-align: center;
 
+}
+
+.main-dose {
+  background-color: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+}
+
+.main-form {
+  background-color: white;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  border-radius: 4px;
+}

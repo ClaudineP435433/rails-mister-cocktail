@@ -1,29 +1,35 @@
 .cocktail{
-  margin-top: 30px;
+  margin-top: 10px;
   position: relative;
   background-color: white;
   box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
-  height: 250px;
+
   text-align: center;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+
+  .cocktail-name {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 
   h4 {
-    position: absolute;
-    color: black;
+    color: rgba(0, 0, 0, 0.4);
     margin: 0;
     font-size: 16px;
     overflow: hidden;
-    white-space: nowrap;
-    text-overflow: ellipsis;
 
   }
 
   .cocktail-picture {
-  width: 100%;
-  height: 200px;
+  width: 80%;
+  height: 170px;
+  margin-top: 20px;
   object-fit: cover;
   background-size: cover;
   background-position: center center;
+  border: 1px solid rgba(0, 0, 0, 0.1);
   }
 
   .cocktail-link {
